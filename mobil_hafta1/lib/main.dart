@@ -21,7 +21,7 @@ void main() {
     List<Personel> pliste = [];
                                   //constracter değişti.
     //Personel p = Personel("personel", "personel123");
-    Personel p = Personel(_adi: "personel", _soyadi:"personel123");
+    Personel p = Personel(adi: "personel", soyadi:"personel123");
     pliste.add(p);
     for(var element in pliste){
       print('${element.adi}');
