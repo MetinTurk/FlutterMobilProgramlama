@@ -50,7 +50,57 @@ class _MyHomePageState extends State<MyHomePage> {
             .inversePrimary,
         title: Text(widget.title),
       ),
-      body:Row(children: [
+      body:Align(
+        alignment: Alignment.bottomCenter,
+        child: Row(   //eğer center'ı silmek istersek alt enter remove this widget yapıp silebiliriz.
+          mainAxisSize: MainAxisSize.min,
+          children: [
+          Container(
+            width: 200,
+            height: 200,
+            color: Colors.red,
+            child: Align(
+              alignment: Alignment.topRight,
+              child: Text("Deneme"),
+            )
+          ),
+          ],
+        ),
+      )
+      /*Center(    //Center dikeyde ortaladı fakat row'un içeriğine dokunamadı sadece kendi alanında ortalama yapabildi.
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,  //Row'un içerisinde ortalama yaptık ekranın tam ortasına geldi.
+          children: [
+            Container(
+              width: 200,
+              height: 200,
+              color: Colors.red,
+              child: Center(
+                  child: Text("Merhaba")    //alt + enter ile with center yapıyoruz kendi yazıyor.
+              ),
+              //Center(child: Text("Merhaba"),),   //bu uzun yolu
+            ),
+          ],
+        ),
+      )
+
+       */
+
+      /*Column(
+        mainAxisSize: MainAxisSize.max,   //match parent gibi çalışır alanın tamamını kaplar.
+        //mainAxisSize: MainAxisSize.min, //wrap content gibi çalışır yani içeriği kadar yer kaplar
+        // crossAxisAlignment: CrossAxisAlignment.stretch, //mainAxisAlignment'ın tersi şeklinde çalışır. Row'da dikeyi hizalar. Column'da yatayı hizalar
+        //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Container(width: 80,height: 80,color: Colors.red,),
+          Container(width: 50,height: 50,color: Colors.blue,),
+          Container(width: 100,height: 100,color: Colors.green,),
+
+        ],
+      )
+       */
+          /*
+      Row(children: [
         Container(
           margin: const EdgeInsets.only(top: 30.0,left: 5.00),
           width: 200,
@@ -68,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ]
         ,)
-        
+      */
         
       
       /*Stack(
