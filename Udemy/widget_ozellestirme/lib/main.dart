@@ -48,7 +48,14 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(height: 20,),
             KirmiziKare(),
             SizedBox(height: 20,),
-            Yazi(icerik: "Merhaba", yaziBoyutu: 30)
+            Yazi("Merhaba", 30.0),
+            //MaviKare(),
+            //SizedBox(height: 20,),
+            //KirmiziKare(),
+            //SizedBox(height: 20,),
+            //Yazi(icerik: "Merhaba", yaziBoyutu: 30)
+
+
           ],
         ),
       )
@@ -57,6 +64,39 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
+class MaviKare extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Container(width: 50, height: 50, color: Colors.blue,);
+  }
+}
+
+class KirmiziKare extends StatelessWidget {
+  const KirmiziKare({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(width: 50, height: 50, color: Colors.red,);
+  }
+}
+class Yazi extends StatelessWidget {
+  //const Yazi({super.key});
+
+  String icerik;
+  double yaziBoyutu;
+
+
+  Yazi(this.icerik, this.yaziBoyutu);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(icerik , style: TextStyle(fontSize: yaziBoyutu),);
+  }
+}
+
+
+
+/*
 class MaviKare  extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -91,5 +131,6 @@ class Yazi extends StatelessWidget {
     return Text(icerik,style: TextStyle(fontSize: yaziBoyutu),);
   }
 }
+ */
 
 
